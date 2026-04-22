@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -57,15 +58,15 @@ export function Hero() {
               mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <a href="#paquetes" className="btn-primary">
+            <Link to="/productos" className="btn-primary">
               Ver paquetes
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
-            <a href="#contacto" className="btn-ghost">
+            </Link>
+            <Link to="/contacto" className="btn-ghost">
               Agendar llamada
-            </a>
+            </Link>
           </div>
 
           <div

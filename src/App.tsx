@@ -1,27 +1,31 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { Philosophy } from "@/components/Philosophy";
-import { Stats } from "@/components/Stats";
-import { Process } from "@/components/Process";
-import { Packages } from "@/components/Packages";
-import { Work } from "@/components/Work";
-import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { HomePage } from "@/pages/HomePage";
+import { ProductosPage } from "@/pages/ProductosPage";
+import { EquipoPage } from "@/pages/EquipoPage";
+import { CasosPage } from "@/pages/CasosPage";
+import { ContactoPage } from "@/pages/ContactoPage";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-ivory text-navy antialiased">
-      <Navbar />
-      <main>
-        <Hero />
-        <Philosophy />
-        <Stats />
-        <Process />
-        <Packages />
-        <Work />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="relative min-h-screen bg-ivory text-navy antialiased">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/productos" element={<ProductosPage />} />
+            <Route path="/equipo" element={<EquipoPage />} />
+            <Route path="/casos" element={<CasosPage />} />
+            <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const links = [
-  { href: "#filosofia", label: "Qué hacemos" },
-  { href: "#proceso", label: "Proceso" },
-  { href: "#paquetes", label: "Paquetes" },
-  { href: "#trabajo", label: "Trabajo" },
-  { href: "#contacto", label: "Contacto" },
+  { to: "/productos", label: "Paquetes" },
+  { to: "/casos", label: "Casos" },
+  { to: "/equipo", label: "Equipo" },
+  { to: "/contacto", label: "Contacto" },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 24);
@@ -19,6 +20,10 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", h);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy/90 backdrop-blur-lg border-b border-navy-700/50 ${
@@ -26,22 +31,26 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group">
           <img src="/logo.png" alt="Altum Digital" className="h-20 w-auto" />
           <span className="font-display font-extrabold text-white text-lg tracking-tight hidden sm:inline">
             Altum <span className="text-teal-400">Digital</span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-white/75 hover:text-white transition-colors font-medium"
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                `text-sm font-medium transition-colors ${
+                  isActive ? "text-teal-400" : "text-white/75 hover:text-white"
+                }`
+              }
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
@@ -65,15 +74,22 @@ export function Navbar() {
       {open && (
         <div className="md:hidden bg-navy-700 border-t border-navy-800 px-6 py-4 space-y-3">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
+            <NavLink
+              key={l.to}
+              to={l.to}
               className="block text-sm text-white/80 hover:text-white font-medium"
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
+          <a
+            href="https://wa.me/529991894671"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-sm text-teal-400 font-semibold"
+          >
+            → WhatsApp
+          </a>
         </div>
       )}
     </header>

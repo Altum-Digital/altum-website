@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Footer() {
   return (
     <footer className="relative bg-white border-t border-navy/10 pt-16 pb-10">
@@ -25,20 +27,20 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="text-navy font-display font-bold text-sm mb-4 tracking-tight">Sitio</div>
             <ul className="space-y-2.5 text-sm text-navy/65">
-              <li><a href="#filosofia" className="hover:text-navy transition">Qué hacemos</a></li>
-              <li><a href="#proceso" className="hover:text-navy transition">Proceso</a></li>
-              <li><a href="#paquetes" className="hover:text-navy transition">Paquetes</a></li>
-              <li><a href="#trabajo" className="hover:text-navy transition">Trabajo</a></li>
+              <li><Link to="/productos" className="hover:text-navy transition">Paquetes</Link></li>
+              <li><Link to="/casos" className="hover:text-navy transition">Casos</Link></li>
+              <li><Link to="/equipo" className="hover:text-navy transition">Equipo</Link></li>
+              <li><Link to="/contacto" className="hover:text-navy transition">Contacto</Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
             <div className="text-navy font-display font-bold text-sm mb-4 tracking-tight">Paquetes</div>
             <ul className="space-y-2.5 text-sm text-navy/65">
-              <li>Presencia · $9k</li>
-              <li>Crecimiento · $12k</li>
-              <li>Total · $15k</li>
-              <li>Suprema · $20k+</li>
+              <li><Link to="/productos#presencia" className="hover:text-navy transition">Presencia · $9k</Link></li>
+              <li><Link to="/productos#crecimiento" className="hover:text-navy transition">Crecimiento · $12k</Link></li>
+              <li><Link to="/productos#total" className="hover:text-navy transition">Total · $15k</Link></li>
+              <li><Link to="/productos#suprema" className="hover:text-navy transition">Suprema · $20k+</Link></li>
             </ul>
           </div>
 
@@ -61,9 +63,8 @@ export function Footer() {
             © {new Date().getFullYear()} Altum Digital · Todos los derechos reservados
           </div>
           <div className="flex gap-5 text-xs text-navy/50">
-            <a href="#" className="hover:text-navy transition">Privacidad</a>
-            <a href="#" className="hover:text-navy transition">Términos</a>
-            <a href="#" className="hover:text-navy transition">Cookies</a>
+            <span>Mérida · México</span>
+            <a href="mailto:hola@altum.digital" className="hover:text-navy transition">hola@altum.digital</a>
           </div>
         </div>
       </div>
