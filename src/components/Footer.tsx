@@ -49,7 +49,7 @@ export function Footer() {
                 <a href="mailto:hola@altum.digital" className="hover:text-navy transition">hola@altum.digital</a>
               </li>
               <li>
-                <a href="https://wa.me/525512345678" target="_blank" rel="noreferrer" className="hover:text-navy transition">WhatsApp</a>
+                <a href="https://wa.me/529991894671" target="_blank" rel="noreferrer" className="hover:text-navy transition">WhatsApp</a>
               </li>
               <li className="text-navy/50 text-xs pt-2">Respuesta en &lt; 24 hrs</li>
             </ul>

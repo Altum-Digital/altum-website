@@ -38,7 +38,7 @@ export function CTA() {
 
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <a
-                  href="https://wa.me/525512345678?text=Hola%20Altum%2C%20quiero%20info%20de%20un%20sitio%20web"
+                  href="https://wa.me/529991894671?text=Hola%20Altum%2C%20quiero%20info%20de%20un%20sitio%20web"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-teal to-lime text-white font-semibold rounded-xl shadow-lg hover:brightness-110 transition"
