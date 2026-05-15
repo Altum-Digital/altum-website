@@ -65,25 +65,18 @@ const recommendations: Recommendation[] = [
     cta: "Ver paquete Presencia",
   },
   {
-    key: "crecimiento",
-    name: "Crecimiento",
-    price: "$12,000",
-    pitch: "El sweet spot — hasta 3 páginas, marcas, Reviews y SEO básico para posicionarte en tu zona.",
-    cta: "Ver paquete Crecimiento",
-  },
-  {
     key: "total",
     name: "Total",
-    price: "$15,000",
+    price: "$12,000",
     pitch: "Para dominar Google — 5 páginas + 13 landings SEO por servicio y landing B2B.",
     cta: "Ver paquete Total",
   },
   {
-    key: "suprema",
-    name: "Suprema",
+    key: "personalizado",
+    name: "Personalizado",
     price: "$20,000+",
     pitch: "Proyecto 100% a la medida — sin plantilla, diseño único y sin límites de páginas.",
-    cta: "Agendar consulta Suprema",
+    cta: "Agendar consulta Personalizado",
   },
 ];
 
@@ -104,7 +97,7 @@ export function PackageCalculator() {
   };
 
   const total = Object.values(answers).reduce((a, b) => a + b, 0);
-  const recIdx = total <= 1 ? 0 : total <= 3 ? 1 : total <= 6 ? 2 : 3;
+  const recIdx = total <= 2 ? 0 : total <= 5 ? 1 : 2;
   const rec = recommendations[recIdx];
 
   const reset = () => {

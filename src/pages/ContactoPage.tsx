@@ -107,7 +107,7 @@ export function ContactoPage() {
                     <option value="">Aún no sé</option>
                     <option>Presencia · $9,000</option>
                     <option>Crecimiento · $12,000</option>
-                    <option>Total · $15,000</option>
+                    <option>Total · \$12,000</option>
                     <option>Suprema · $20,000+</option>
                   </select>
                 </div>

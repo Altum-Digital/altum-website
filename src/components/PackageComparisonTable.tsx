@@ -42,7 +42,7 @@ export function PackageComparisonTable() {
               {comparisonRows.map((group) => (
                 <>
                   <tr key={group.category} className="bg-ivory/50">
-                    <td colSpan={5} className="p-3 px-5 text-[10px] font-bold text-navy/50 uppercase tracking-wider">
+                    <td colSpan={4} className="p-3 px-5 text-[10px] font-bold text-navy/50 uppercase tracking-wider">
                       {group.category}
                     </td>
                   </tr>

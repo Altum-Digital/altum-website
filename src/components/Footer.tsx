@@ -38,9 +38,8 @@ export function Footer() {
             <div className="text-navy font-display font-bold text-sm mb-4 tracking-tight">Paquetes</div>
             <ul className="space-y-2.5 text-sm text-navy/65">
               <li><Link to="/productos#presencia" className="hover:text-navy transition">Presencia · $9k</Link></li>
-              <li><Link to="/productos#crecimiento" className="hover:text-navy transition">Crecimiento · $12k</Link></li>
               <li><Link to="/productos#total" className="hover:text-navy transition">Total · $15k</Link></li>
-              <li><Link to="/productos#suprema" className="hover:text-navy transition">Suprema · $20k+</Link></li>
+              <li><Link to="/productos#personalizado" className="hover:text-navy transition">Personalizado · $20k+</Link></li>
             </ul>
           </div>
 

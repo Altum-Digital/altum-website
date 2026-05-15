@@ -22,18 +22,9 @@ const packages: Pkg[] = [
     accent: "orange",
   },
   {
-    key: "crecimiento",
-    name: "Crecimiento",
-    price: "$12,000",
-    time: "10–14 días",
-    pitch: "Hasta 3 páginas con marcas, seguros y Reviews.",
-    features: ["Hasta 3 páginas", "Marcas + alianzas", "Google Reviews", "Micro-interacciones", "Sitemap + robots"],
-    accent: "teal",
-  },
-  {
     key: "total",
     name: "Total",
-    price: "$15,000",
+    price: "$12,000",
     time: "20–30 días",
     pitch: "Hasta 5 páginas + 13 landings SEO. Para dominar Google.",
     features: ["Hasta 5 páginas", "13 landings SEO por servicio", "Landing B2B", "Stats + logos clientes", "Sitemap completo"],
@@ -41,9 +32,9 @@ const packages: Pkg[] = [
     featured: true,
   },
   {
-    key: "suprema",
-    name: "Suprema",
-    price: "$20,000",
+    key: "personalizado",
+    name: "Personalizado",
+    price: "$20,000+",
     time: "A cotizar",
     pitch: "Proyecto 100% a la medida. Sin límites.",
     features: ["Páginas ilimitadas", "Landings ilimitadas", "Diseño custom", "Stats custom", "Proyecto bespoke"],
@@ -67,14 +58,14 @@ export function Packages() {
         <div className="max-w-2xl mb-16">
           <p className="text-orange-600 text-xs font-semibold uppercase tracking-wider mb-4">Paquetes</p>
           <h2 className="font-display font-extrabold text-navy text-4xl md:text-5xl tracking-tightest leading-tight">
-            4 planes. Uno para <span className="text-gradient-cool">cada etapa</span> de tu negocio.
+            3 planes. Uno para <span className="text-gradient-cool">cada etapa</span> de tu negocio.
           </h2>
           <p className="text-navy/65 text-lg mt-5 leading-relaxed">
             Desde la primera página web de tu negocio hasta el proyecto más ambicioso. Precios transparentes, sin letra chiquita.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {packages.map((p, i) => {
             const c = accent[p.accent];
             return (

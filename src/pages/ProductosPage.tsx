@@ -25,7 +25,7 @@ export function ProductosPage() {
           <div className="max-w-3xl">
             <p className="text-orange-600 text-xs font-semibold uppercase tracking-wider mb-4">Paquetes</p>
             <h1 className="font-display font-extrabold text-navy text-5xl md:text-6xl tracking-tightest leading-[1.05] mb-6">
-              4 planes. Uno para <span className="text-gradient-primary">cada etapa</span> de tu negocio.
+              3 planes. Uno para <span className="text-gradient-primary">cada etapa</span> de tu negocio.
             </h1>
             <p className="text-navy/70 text-lg md:text-xl leading-relaxed max-w-2xl">
               Desde tu primer sitio en 5 días hasta un proyecto bespoke de 8 semanas. Todos los precios en MXN, sin letra chiquita, con garantía de 30 días.
@@ -54,7 +54,7 @@ export function ProductosPage() {
                 {/* LEFT */}
                 <div>
                   <div className={`inline-block text-xs font-bold uppercase tracking-wider mb-3 ${c.text}`}>
-                    {idx === 0 ? "Entrada" : idx === 1 ? "Sweet spot" : idx === 2 ? "Dominar Google" : "A la medida"}
+                    {idx === 0 ? "Entrada" : idx === 1 ? "Dominar Google" : "A la medida"}
                   </div>
                   <div className="flex items-baseline gap-3 mb-3">
                     <h2 className="font-display font-extrabold text-navy text-5xl md:text-6xl tracking-tightest leading-none">

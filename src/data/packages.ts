@@ -1,5 +1,5 @@
 export type Pkg = {
-  key: "presencia" | "crecimiento" | "total" | "suprema";
+  key: "presencia" | "total" | "personalizado";
   name: string;
   price: string;
   priceNumber: number;
@@ -34,30 +34,10 @@ export const packages: Pkg[] = [
     accent: "orange",
   },
   {
-    key: "crecimiento",
-    name: "Crecimiento",
-    price: "$12,000",
-    priceNumber: 12000,
-    time: "10–14 días",
-    pitch: "Imagen profesional con marcas, seguros y Google Reviews.",
-    pages: "Hasta 3 páginas",
-    features: [
-      "Hasta 3 páginas con router",
-      "Marcas atendidas + seguros",
-      "Google Reviews badge",
-      "Micro-interacciones premium",
-      "Sitemap + robots.txt",
-      "Stats 4-5 métricas",
-      "2 rondas de ajustes",
-    ],
-    support: "30 días de soporte incluido",
-    accent: "teal",
-  },
-  {
     key: "total",
     name: "Total",
-    price: "$15,000",
-    priceNumber: 15000,
+    price: "$12,000",
+    priceNumber: 12000,
     time: "20–30 días",
     pitch: "Hasta 5 páginas + landings SEO por servicio para dominar Google local.",
     pages: "Hasta 5 páginas + landings SEO",
@@ -75,8 +55,8 @@ export const packages: Pkg[] = [
     featured: true,
   },
   {
-    key: "suprema",
-    name: "Suprema",
+    key: "personalizado",
+    name: "Personalizado",
     price: "$20,000+",
     priceNumber: 20000,
     time: "A cotizar · 4–8 semanas",
@@ -98,51 +78,51 @@ export const packages: Pkg[] = [
 
 export const comparisonRows: {
   category: string;
-  rows: { feature: string; values: [string, string, string, string] }[];
+  rows: { feature: string; values: [string, string, string] }[];
 }[] = [
   {
     category: "Estructura",
     rows: [
-      { feature: "Páginas incluidas", values: ["1 (one-pager)", "Hasta 3", "Hasta 5", "Ilimitadas"] },
-      { feature: "Landings SEO por servicio", values: ["—", "—", "Hasta 13", "Ilimitadas"] },
-      { feature: "Landing B2B / Corporativo", values: ["—", "—", "✓", "✓"] },
-      { feature: "Sitemap + robots.txt", values: ["—", "✓", "✓", "✓"] },
+      { feature: "Páginas incluidas", values: ["1 (one-pager)", "Hasta 5", "Ilimitadas"] },
+      { feature: "Landings SEO por servicio", values: ["—", "Hasta 13", "Ilimitadas"] },
+      { feature: "Landing B2B / Corporativo", values: ["—", "✓", "✓"] },
+      { feature: "Sitemap + robots.txt", values: ["—", "✓", "✓"] },
     ],
   },
   {
     category: "Contenido y confianza",
     rows: [
-      { feature: "FAQ accordion", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Garantía con número específico", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Stats animados", values: ["3 métricas", "4–5 + timeline", "4–5 + logos", "Custom"] },
-      { feature: "Marcas atendidas (marquee)", values: ["—", "✓", "✓", "✓"] },
-      { feature: "Seguros / alianzas", values: ["—", "✓", "✓", "✓"] },
-      { feature: "Google Reviews badge", values: ["—", "✓", "✓", "✓"] },
+      { feature: "FAQ accordion", values: ["✓", "✓", "✓"] },
+      { feature: "Garantía con número específico", values: ["✓", "✓", "✓"] },
+      { feature: "Stats animados", values: ["3 métricas", "4–5 + logos", "Custom"] },
+      { feature: "Marcas atendidas (marquee)", values: ["—", "✓", "✓"] },
+      { feature: "Seguros / alianzas", values: ["—", "✓", "✓"] },
+      { feature: "Google Reviews badge", values: ["—", "✓", "✓"] },
     ],
   },
   {
     category: "Funcionalidad",
     rows: [
-      { feature: "Formulario → WhatsApp", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Micro-interacciones premium", values: ["—", "✓", "✓", "✓"] },
-      { feature: "Diseño 100% a la medida", values: ["—", "—", "—", "✓"] },
+      { feature: "Formulario → WhatsApp", values: ["✓", "✓", "✓"] },
+      { feature: "Micro-interacciones premium", values: ["—", "✓", "✓"] },
+      { feature: "Diseño 100% a la medida", values: ["—", "—", "✓"] },
     ],
   },
   {
     category: "Legal y base",
     rows: [
-      { feature: "Aviso + T&C + cookies (LFPDPPP)", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Schema.org + Meta tags", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Core Web Vitals optimizados", values: ["✓", "✓", "✓", "✓"] },
-      { feature: "Responsive + móvil", values: ["✓", "✓", "✓", "✓"] },
+      { feature: "Aviso + T&C + cookies (LFPDPPP)", values: ["✓", "✓", "✓"] },
+      { feature: "Schema.org + Meta tags", values: ["✓", "✓", "✓"] },
+      { feature: "Core Web Vitals optimizados", values: ["✓", "✓", "✓"] },
+      { feature: "Responsive + móvil", values: ["✓", "✓", "✓"] },
     ],
   },
   {
     category: "Proceso",
     rows: [
-      { feature: "Rondas de ajustes", values: ["1", "2", "Ilimitadas", "Ilimitadas"] },
-      { feature: "Soporte post-entrega", values: ["30 días", "30 días", "60 días", "90 días"] },
-      { feature: "Tiempo de entrega", values: ["5–7 días", "10–14 días", "20–30 días", "4–8 semanas"] },
+      { feature: "Rondas de ajustes", values: ["1", "Ilimitadas", "Ilimitadas"] },
+      { feature: "Soporte post-entrega", values: ["30 días", "60 días", "90 días"] },
+      { feature: "Tiempo de entrega", values: ["5–7 días", "20–30 días", "4–8 semanas"] },
     ],
   },
 ];
